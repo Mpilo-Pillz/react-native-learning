@@ -1,11 +1,13 @@
 import React from "react";
 import {View, StyleSheet} from "react-native";
 import {CurrentWeather} from "@/components/CurrentWeather";
+import {UpcomingWeather} from "@/components/UpcomingWeather";
 
 export default function RootLayout() {
     return (
         <View style={styles.container}>
             <CurrentWeather />
+            <UpcomingWeather />
         </View>
     )
 }
