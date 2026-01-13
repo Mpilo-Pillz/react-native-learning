@@ -6,7 +6,7 @@ import {UpcomingWeather} from "@/components/UpcomingWeather";
 export default function RootLayout() {
     return (
         <View style={styles.container}>
-            <CurrentWeather />
+            {/*<CurrentWeather />*/}
             <UpcomingWeather />
         </View>
     )
