@@ -48,3 +48,5 @@ Join our community of developers creating universal apps.
 
 - [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
 - [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+- [Royalty Free images](https://pixabay.com/photos/search/clouds/): Pixabay for photos you can use for free
+- [React Native Crash Course](https://www.youtube.com/watch?v=obH0Po_RdWk&t=1249s): The course I followed for this app
