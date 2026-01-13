@@ -2,12 +2,14 @@ import React from "react";
 import {View, StyleSheet} from "react-native";
 import {CurrentWeather} from "@/app/screens/CurrentWeather";
 import {UpcomingWeather} from "@/app/screens/UpcomingWeather";
+import {City} from "@/app/screens/City";
 
 export default function RootLayout() {
     return (
         <View style={styles.container}>
             {/*<CurrentWeather />*/}
-            <UpcomingWeather />
+            {/*<UpcomingWeather />*/}
+            <City />
         </View>
     )
 }
