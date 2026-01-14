@@ -1,7 +1,7 @@
 import React from 'react';
 import {Text, StyleSheet, ImageBackground, StatusBar, View} from 'react-native';
-import {Feather} from '@expo/vector-icons'
 import {SafeAreaView} from "react-native-safe-area-context";
+import {IconText} from "@/app/components/IconText"
 
 export const City = () => {
     const {container,
@@ -20,14 +20,29 @@ export const City = () => {
                 <Text style={[cityName, placeText]}>Jhb</Text>
                 <Text style={[countryName, placeText]}>Mzansi</Text>
                 <View style={populationWrapper}>
-                    <Feather name={'user'} size={50} color={'red'} />
-                    <Text style={populationText}>9000</Text>
+                    <IconText
+                    iconName={'user'}
+                    iconColor={'red'}
+                    bodyText={7000}
+                    bodyTextStyles={populationText}
+                    />
+
                 </View>
                 <View style={riseSetWrapper}>
-                    <Feather name={'sunrise'} size={50} color={'white'}/>
-                    <Text style={riseSetText}>06:37:49am</Text>
-                    <Feather name={'sunset'} size={50} color={'white'}/>
-                    <Text style={riseSetText}>19:26:58pm</Text>
+                    <IconText
+                        iconName={'sunrise'}
+                        iconColor={'white'}
+                        bodyText={'06:37:49am'}
+                        bodyTextStyles={riseSetText}
+                    />
+                    <IconText
+                        iconName={'sunset'}
+                        iconColor={'white'}
+                        bodyText={'19:26:58pm'}
+                        bodyTextStyles={riseSetText}
+                    />
+                    {/*<Feather name={'sunset'} size={50} color={'white'}/>*/}
+                    {/*<Text style={riseSetText}>19:26:58pm</Text>*/}
                 </View>
             </ImageBackground>
         </SafeAreaView>
@@ -64,7 +79,6 @@ const styles = StyleSheet.create({
         fontSize: 25,
         marginLeft: 7.5,
         color: "red",
-        fontWeight: "bold"
     },
     riseSetWrapper: {
         flexDirection: "row",
@@ -75,6 +89,5 @@ const styles = StyleSheet.create({
     riseSetText: {
         fontSize: 20,
         color: 'white',
-        fontWeight: "bold"
     }
 })
