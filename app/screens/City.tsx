@@ -12,14 +12,15 @@ export const City = () => {
         populationText,
         populationWrapper,
         riseSetWrapper,
-        riseSetText
+        riseSetText,
+        rowLayout
     } = styles
     return (
         <SafeAreaView style={container}>
             <ImageBackground style={imageLayout} source={require('../../assets/city.jpg')}>
                 <Text style={[cityName, placeText]}>Jhb</Text>
                 <Text style={[countryName, placeText]}>Mzansi</Text>
-                <View style={populationWrapper}>
+                <View style={[populationWrapper, rowLayout]}>
                     <IconText
                     iconName={'user'}
                     iconColor={'red'}
@@ -28,7 +29,7 @@ export const City = () => {
                     />
 
                 </View>
-                <View style={riseSetWrapper}>
+                <View style={[riseSetWrapper, rowLayout]}>
                     <IconText
                         iconName={'sunrise'}
                         iconColor={'white'}
@@ -41,8 +42,6 @@ export const City = () => {
                         bodyText={'19:26:58pm'}
                         bodyTextStyles={riseSetText}
                     />
-                    {/*<Feather name={'sunset'} size={50} color={'white'}/>*/}
-                    {/*<Text style={riseSetText}>19:26:58pm</Text>*/}
                 </View>
             </ImageBackground>
         </SafeAreaView>
@@ -70,8 +69,6 @@ const styles = StyleSheet.create({
         color: 'white'
     },
     populationWrapper: {
-       flexDirection: "row",
-       alignItems: "center",
        justifyContent: "center",
         marginTop: 30
     },
@@ -81,13 +78,15 @@ const styles = StyleSheet.create({
         color: "red",
     },
     riseSetWrapper: {
-        flexDirection: "row",
-        alignItems: "center",
         justifyContent: "space-around",
         marginTop: 30
     },
     riseSetText: {
         fontSize: 20,
         color: 'white',
+    },
+    rowLayout: {
+        flexDirection: 'row',
+        alignItems: 'center'
     }
 })
