@@ -1,9 +1,8 @@
 import React from 'react';
-import {View, Text, StyleSheet} from 'react-native'
+import {View, Text} from 'react-native'
 
 export const RowText = (props) => {
-    const {containerStyles, messageOneStyles, messageTwoStyles } = styles
-    const {messageOne, messageTwo} = props
+    const {messageOne, messageTwo,containerStyles, messageOneStyles, messageTwoStyles } = props
     return (
         <View style={containerStyles}>
             <Text style={messageOneStyles}>{messageOne}</Text>
@@ -11,9 +10,3 @@ export const RowText = (props) => {
         </View>
     )
 }
-
-const styles = StyleSheet.create({
-    bodyWrapper {
-
-    }
-})

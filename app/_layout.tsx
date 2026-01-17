@@ -7,9 +7,9 @@ import {City} from "@/app/screens/City";
 export default function RootLayout() {
     return (
         <View style={styles.container}>
-            {/*<CurrentWeather />*/}
+            <CurrentWeather />
             {/*<UpcomingWeather />*/}
-            <City />
+            {/*<City />*/}
         </View>
     )
 }

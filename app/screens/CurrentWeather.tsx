@@ -19,15 +19,15 @@ export const CurrentWeather = () => {
                 messageOneStyles={styles.highLow}
                 messageTwoStyles={styles.highLow}
                 />
-                {/*<View style={styles.highLowWrapper}>*/}
-                {/*    <Text style={styles.highLow}>High: 8 </Text>*/}
-                {/*    <Text style={styles.highLow}>Low: 6</Text>*/}
-                {/*</View>*/}
             </View>
-            <View style={styles.bodyWrapper}>
-                <Text style={styles.description}>Its sunny</Text>
-                <Text style={styles.message}>Its perfect t-shirt weather</Text>
-            </View>
+            <RowText
+                messageOne={'Its sunny'}
+                messageTwo={'Its perfect t-shirt weather'}
+                containerStyles={styles.bodyWrapper}
+                messageOneStyles={styles.description}
+                messageTwoStyles={styles.message}
+            />
+
         </SafeAreaView>
     )
 }
