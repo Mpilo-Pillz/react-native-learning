@@ -18,6 +18,17 @@ export default function TabLayout() {
                 tabBarInactiveTintColor: 'grey',
                 headerShown: false,
                 tabBarButton: HapticTab,
+                tabBarStyle: {
+                    backgroundColor: 'lightblue',
+                },
+                headerStyle: {
+                    backgroundColor: 'lightBlue'
+                },
+                headerTitleStyle: {
+                    fontWeight: 'bold',
+                    fontSize: 25,
+                    color: 'tomato'
+                }
             }}>
             <Tabs.Screen name="Current" options={{ title: "Current", tabBarIcon: ({focused}) => (
                 <Feather name={'droplet'} size={25} color={focused ? 'tomato' : 'black'}/>
