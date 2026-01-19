@@ -19,17 +19,17 @@ export default function TabLayout() {
                 headerShown: false,
                 tabBarButton: HapticTab,
             }}>
-            <Tabs.Screen name="current" options={{ title: "Current", tabBarIcon: ({focused}) => (
+            <Tabs.Screen name="Current" options={{ title: "Current", tabBarIcon: ({focused}) => (
                 <Feather name={'droplet'} size={25} color={focused ? 'tomato' : 'black'}/>
                 ) }} />
             <Tabs.Screen
-                name="upcoming"
+                name="Upcoming"
                 options={{ title: "Upcoming", tabBarIcon: ({focused}) => (
                         <Feather name={'clock'} size={25} color={focused ? 'tomato' : 'black'}/>
                     ) }}
 
             />
-            <Tabs.Screen name="city" options={{ title: "City", tabBarIcon: ({focused}) => (
+            <Tabs.Screen name="City" options={{ title: "City", tabBarIcon: ({focused}) => (
                     <Feather name={'home'} size={25} color={focused ? 'tomato' : 'black'}/>
                 ) }} />
         </Tabs>
