@@ -3,6 +3,7 @@ import {StyleSheet, Text, View} from "react-native";
 import {Feather} from "@expo/vector-icons";
 import React from "react";
 import {RowText} from "@/app/components/RowText";
+import {weatherType, WeatherType} from '@/app/utilities/WeatherType'
 
 export const CurrentWeather = () => {
     return (
@@ -22,7 +23,7 @@ export const CurrentWeather = () => {
             </View>
             <RowText
                 messageOne={'Its sunny'}
-                messageTwo={'Its perfect t-shirt weather'}
+                messageTwo={weatherType.Thunderstorm.message}
                 containerStyles={styles.bodyWrapper}
                 messageOneStyles={styles.description}
                 messageTwoStyles={styles.message}
