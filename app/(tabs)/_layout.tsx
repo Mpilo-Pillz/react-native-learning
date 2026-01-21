@@ -1,14 +1,17 @@
 import { Tabs } from 'expo-router';
-import React from 'react';
+import React, {useState} from 'react';
 
 import { HapticTab } from '@/components/haptic-tab';
 import { IconSymbol } from '@/components/ui/icon-symbol';
 import { Colors } from '@/constants/theme';
 import { useColorScheme } from '@/hooks/use-color-scheme';
 import { Feather } from "@expo/vector-icons";
+import {ActivityIndicator, View, StyleSheet} from "react-native";
+import {SafeAreaView} from "react-native-safe-area-context";
 
 
 export default function TabLayout() {
+
     const colorScheme = useColorScheme();
 
     return (
@@ -46,6 +49,13 @@ export default function TabLayout() {
         </Tabs>
     );
 }
+
+const styles = StyleSheet.create({
+    container: {
+        justifyContent: 'center',
+        flex: 1
+    }
+})
 
 // export default function TabLayout() {
 //   const colorScheme = useColorScheme();

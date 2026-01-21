@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import {CurrentWeather} from "@/app/screens/CurrentWeather";
 import {NavigationContainer} from "@react-navigation/native";
 import {createBottomTabNavigator} from "@react-navigation/bottom-tabs";
@@ -19,12 +19,14 @@ import {City} from "@/app/screens/City";
 //     )
 // }
 
+import {ActivityIndicator, StyleSheet, View} from "react-native";
 import { DarkTheme, DefaultTheme, ThemeProvider } from '@react-navigation/native';
 import { Stack } from 'expo-router';
 import { StatusBar } from 'expo-status-bar';
 import 'react-native-reanimated';
 
 import { useColorScheme } from '@/hooks/use-color-scheme';
+import {SafeAreaView} from "react-native-safe-area-context";
 
 export const unstable_settings = {
   anchor: '(tabs)',
@@ -32,6 +34,19 @@ export const unstable_settings = {
 
 export default function RootLayout() {
   const colorScheme = useColorScheme();
+
+    const [loading, setLoading] = useState(true)
+
+    if (loading) {
+        return (
+            <SafeAreaView style={styles.container}>
+                <View>
+                    <ActivityIndicator style={styles.container} size={'large'} color={'blue'}/>
+                </View>
+
+            </SafeAreaView>
+        )
+    }
 
   return (
     <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
@@ -43,3 +58,10 @@ export default function RootLayout() {
     </ThemeProvider>
   );
 }
+
+const styles = StyleSheet.create({
+    container: {
+        flex: 1,
+        marginTop: 30
+    },
+})
