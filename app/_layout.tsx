@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import {CurrentWeather} from "@/app/screens/CurrentWeather";
 import {NavigationContainer} from "@react-navigation/native";
 import {createBottomTabNavigator} from "@react-navigation/bottom-tabs";
@@ -36,6 +36,19 @@ export default function RootLayout() {
   const colorScheme = useColorScheme();
 
     const [loading, setLoading] = useState(true)
+    const [location, setLocation] = useState(null)
+    const [error, setError] = useState(null)
+
+    useEffect(() => {
+        (async () => {
+            let {status} = await Location.requestForegroundPermissionsAsync()
+            if (status !== 'granted') {
+                setError("Location access denied by user")
+            }
+            let location = await Location.getCurrentPositionAsync({})
+            setLocation(location)
+        })
+    }, [])
 
     if (loading) {
         return (
